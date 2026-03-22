@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Network - Asian Infertility Management</title>
+  <!-- Google Fonts: Inter and Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#001d33",
+              "on-surface-variant": "#42474d",
+              "on-tertiary-container": "#f3fffd",
+              "primary-fixed-dim": "#a7caee",
+              "on-primary": "#ffffff",
+              "secondary-container": "#e7ded5",
+              "error": "#ba1a1a",
+              "surface-bright": "#fdf8f6",
+              "surface-container": "#f2edea",
+              "surface-variant": "#e6e2df",
+              "inverse-surface": "#32302f",
+              "on-background": "#1c1b1a",
+              "tertiary-container": "#637976",
+              "primary-container": "#567898",
+              "on-primary-fixed-variant": "#264a68",
+              "on-tertiary": "#ffffff",
+              "inverse-on-surface": "#f4f0ed",
+              "surface-dim": "#ddd9d7",
+              "on-surface": "#1c1b1a",
+              "surface-tint": "#3f6181",
+              "tertiary": "#4a605e",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f7f3f0",
+              "on-primary-container": "#fdfcff",
+              "surface": "#fdf8f6",
+              "primary-fixed": "#cee5ff",
+              "secondary-fixed-dim": "#cdc5bc",
+              "secondary": "#635d56",
+              "on-error-container": "#93000a",
+              "tertiary-fixed-dim": "#b4cbc8",
+              "on-secondary-fixed": "#1f1b15",
+              "secondary-fixed": "#eae1d8",
+              "on-secondary-container": "#68625a",
+              "surface-container-highest": "#e6e2df",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#73777e",
+              "primary": "#3d5f7e",
+              "inverse-primary": "#a7caee",
+              "on-tertiary-fixed-variant": "#354b49",
+              "background": "#fdf8f6",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#4b463f",
+              "surface-container-high": "#ece7e5",
+              "tertiary-fixed": "#d0e7e4",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed": "#091f1d",
+              "outline-variant": "#c2c7ce"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+  <style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif', serif; }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(253, 248, 246, 0.8);
+        }
+        @keyframes fadeInRight {
+          from { opacity: 0; transform: translateX(-20px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        .animate-fade-in-right {
+          animation: fadeInRight 0.8s ease-out forwards;
+        }
+        .scroll-reveal {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: all 1s ease-out;
+        }
+    </style>
+  <link rel="icon" href="Images/Fevicon.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-surface text-on-surface overflow-x-clip">
+
+<!-- ==================== NAVBAR (Synced from index.html) ==================== -->
+<header class="navbar-wrapper" id="navbar">
+  <div class="utility-bar">
+    <div class="utility-bar__inner">
+      <div class="utility-bar__separator"></div>
+      <button class="search-btn" id="searchOpen" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <div class="utility-bar__social">
+        <a href="https://www.facebook.com/asianinfertilityindia/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/asian_ivf_indore/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@asianfertilityindore" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2h15a2 2 0 0 1 2 2 24.12 24.12 0 0 1 0 10 2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2z"/><path d="m10 15 5-3-5-3z"/></svg>
+        </a>
+      </div>
+      <div class="utility-bar__separator"></div>
+      <a href="locations.html" class="utility-pill utility-pill--outline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Locations
+      </a>
+      <div class="utility-bar__separator"></div>
+      <div class="phone-dropdown" id="phoneDropdown">
+        <button class="phone-dropdown__trigger" id="phoneToggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Phone Numbers
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="chevron"><path d="m6 9 6 6 6-9"/></svg>
+        </button>
+        <div class="phone-dropdown__menu" id="phoneMenu">
+          <a href="tel:+917581955550" class="phone-dropdown__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <div class="phone-dropdown__label">Support</div>
+              <div class="phone-dropdown__number">+91-7581955550</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <a href="#" class="btn-ask">Contact Us</a>
+      <a href="#" class="btn-appointments">Book an Appointment</a>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <div class="main-nav__inner">
+      <a href="index.html" class="logo">
+        <img src="Images/Brand Logo.png" alt="Asian Infertility Management Logo">
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">Why AIIM</a>
+          <div class="mega-dropdown mega-dropdown--wide mega-dropdown--left">
+            <div class="mega-dropdown__grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="mega-dropdown__section">
+                <div class="mega-dropdown__title">About AIIM</div>
+                <a href="#" class="mega-dropdown__link">About Us</a>
+                <a href="#" class="mega-dropdown__link">Infrastructure</a>
+                <a href="#" class="mega-dropdown__link">Center Of Excellence</a>
+                <a href="#" class="mega-dropdown__link">Asian IVF Lab</a>
+                <a href="#" class="mega-dropdown__link">Asian Team</a>
+              </div>
+              <div class="mega-dropdown__section">
+                <div class="mega-dropdown__title">Director Message</div>
+                <a href="#" class="mega-dropdown__link">Dr Dinesh Jain</a>
+                <a href="#" class="mega-dropdown__link">Dr Shefali Jain</a>
+              </div>
+              <div class="mega-dropdown__section">
+                <div class="mega-dropdown__title">More</div>
+                <a href="#" class="mega-dropdown__link">Awards And Recognitions</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">Our Treatment</a>
+          <div class="mega-dropdown mega-dropdown--wide mega-dropdown--left">
+            <div class="mega-dropdown__grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div>
+                <div class="mega-dropdown__section">
+                  <div class="mega-dropdown__title">Fertility Treatments</div>
+                  <a href="#" class="mega-dropdown__link">In-Vitro Fertilization</a>
+                  <a href="#" class="mega-dropdown__link">ICSI Treatment</a>
+                  <a href="#" class="mega-dropdown__link">IUI Treatment</a>
+                </div>
+              </div>
+              <div>
+                <div class="mega-dropdown__section">
+                  <div class="mega-dropdown__title">Diagnostic Tests</div>
+                  <a href="#" class="mega-dropdown__link">Hormonal Evaluation</a>
+                  <a href="#" class="mega-dropdown__link">Ovarian Reserve Test</a>
+                </div>
+              </div>
+              <div>
+                <div class="mega-dropdown__section">
+                  <div class="mega-dropdown__title">Advance Care</div>
+                  <a href="#" class="mega-dropdown__link">IMSI</a>
+                  <a href="#" class="mega-dropdown__link">DNA Fragmentation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-menu__item"><a href="#" class="nav-menu__link">Blog</a></li>
+        <li class="nav-menu__item"><a href="locations.html" class="nav-menu__link font-bold text-[#b8608e]">Locations</a></li>
+        <li class="nav-menu__item"><a href="#" class="nav-menu__link">Patient Awareness</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main class="pt-32">
+  <!-- ADVANCED GLOBAL NETWORK MAP (Match Ideal Map UI) -->
+  <section class="py-40 bg-white relative overflow-hidden min-h-[800px]">
+    <div class="max-w-7xl mx-auto px-6 text-center z-10 relative mb-12">
+      <h1 class="font-bold text-4xl md:text-6xl text-black transition-all duration-700" id="heroTitle">
+        Global <span class="text-neutral-400">Network</span>
+      </h1>
+      <p class="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-6 animate-fade-in-right">
+        Connect with teams and clients worldwide. Our platform enables seamless 
+        collaboration across continents, bringing the world to your workspace.
+      </p>
+    </div>
+
+    <!-- The Map Container -->
+    <div class="max-w-7xl mx-auto relative px-6 group/map">
+      <div id="worldMapContainer" class="w-full aspect-[2/1] bg-white rounded-3xl relative overflow-hidden border border-outline-variant/10 shadow-[0_0_50px_rgba(0,0,0,0.02)] transition-all duration-700 hover:shadow-[0_0_80px_rgba(0,0,0,0.05)]">
+        
+        <!-- DottedMap Background — same library as world-map.tsx -->
+        <img
+          id="dottedMapBg"
+          alt="world map"
+          draggable="false"
+          height="495"
+          width="1056"
+          class="h-full w-full pointer-events-none select-none object-cover absolute inset-0"
+          style="mask-image: linear-gradient(to bottom, transparent, white 10%, white 90%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, white 10%, white 90%, transparent);"
+        >
+
+        <svg id="mapSvg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" class="w-full h-full absolute inset-0 pointer-events-auto">
+          <defs>
+            <linearGradient id="path-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.2" />
+              <stop offset="10%" stop-color="#0ea5e9" stop-opacity="1" />
+              <stop offset="90%" stop-color="#0ea5e9" stop-opacity="1" />
+              <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.2" />
+            </linearGradient>
+            
+            <filter id="glow">
+              <feMorphology operator="dilate" radius="1.5" />
+              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <!-- Paths, Dots and Labels are injected here via JS -->
+        </svg>
+
+        <!-- Mobile Tooltip -->
+        <div id="mobileTooltip" class="absolute bottom-8 left-8 bg-white/95 text-black px-6 py-3 rounded-2xl text-sm font-bold shadow-2xl transition-all duration-300 pointer-events-none sm:hidden border border-outline-variant/10">
+          Location Info
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORLDWIDE LOCATIONS TIMELINE -->
+  <section class="py-24 px-6 bg-surface overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section header -->
+      <div class="text-center mb-20 scroll-reveal">
+        <span class="text-xs font-bold uppercase tracking-[0.3em] mb-4 block"><span class="text-on-surface">OUR GLOBAL </span><span class="text-[#b8608e]">FOOTPRINT</span></span>
+        <h2 class="text-4xl md:text-6xl font-headline">The Sanctuary Network</h2>
+        <p class="text-on-surface-variant mt-4 max-w-xl mx-auto text-sm leading-relaxed">Clinics of excellence, placed with purpose — growing across India and the world.</p>
+      </div>
+
+      <!-- Timeline wrapper: relative container for the vertical line -->
+      <div class="relative">
+
+        <!-- Vertical center line -->
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-outline-variant/40 to-transparent -translate-x-1/2"></div>
+
+        <div class="space-y-16">
+
+          <!-- Entry 1: LEFT card -->
+          <div class="flex flex-col md:flex-row items-center gap-0 group scroll-reveal" style="transition-delay:0.1s">
+            <!-- Left card -->
+            <div class="md:w-[calc(50%-2rem)] md:pr-10 w-full">
+              <div class="bg-white rounded-[2.5rem] border border-outline-variant/10 shadow-sm p-8 transition-all duration-700 group-hover:shadow-[0_20px_60px_-15px_rgba(184,96,142,0.12)] group-hover:-translate-y-1">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-10 h-10 rounded-full bg-[#b8608e]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <span class="material-symbols-outlined text-[#b8608e] text-lg">location_on</span>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-headline text-on-surface">Indore — LIG Square</h3>
+                    <p class="text-secondary text-sm mt-1">7, LIG Square, Main Road, Indore</p>
+                  </div>
+                </div>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Our primary IVF sanctuary and head office. Home to the first Asian IVF Lab in the region.</p>
+              </div>
+            </div>
+            <!-- Center year badge -->
+            <div class="hidden md:flex w-16 shrink-0 flex-col items-center justify-center relative z-10">
+              <div class="w-14 h-14 rounded-full bg-white border-2 border-[#b8608e]/50 flex items-center justify-center shadow-md">
+                <span class="text-[#b8608e] font-bold text-xs text-center leading-tight">2004</span>
+              </div>
+            </div>
+            <!-- Right spacer -->
+            <div class="hidden md:block md:w-[calc(50%-2rem)]"></div>
+          </div>
+
+          <!-- Entry 2: RIGHT card -->
+          <div class="flex flex-col md:flex-row items-center gap-0 group scroll-reveal" style="transition-delay:0.2s">
+            <!-- Left spacer -->
+            <div class="hidden md:block md:w-[calc(50%-2rem)]"></div>
+            <!-- Center year badge -->
+            <div class="hidden md:flex w-16 shrink-0 flex-col items-center justify-center relative z-10">
+              <div class="w-14 h-14 rounded-full bg-white border-2 border-[#b8608e]/50 flex items-center justify-center shadow-md">
+                <span class="text-[#b8608e] font-bold text-xs text-center leading-tight">2010</span>
+              </div>
+            </div>
+            <!-- Right card -->
+            <div class="md:w-[calc(50%-2rem)] md:pl-10 w-full">
+              <div class="bg-white rounded-[2.5rem] border border-outline-variant/10 shadow-sm p-8 transition-all duration-700 group-hover:shadow-[0_20px_60px_-15px_rgba(184,96,142,0.12)] group-hover:-translate-y-1">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-10 h-10 rounded-full bg-[#b8608e]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <span class="material-symbols-outlined text-[#b8608e] text-lg">location_on</span>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-headline text-on-surface">Indore — Vijay Nagar</h3>
+                    <p class="text-secondary text-sm mt-1">C-Block, Orbit Mall Area, Indore</p>
+                  </div>
+                </div>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Strategically located in Indore's thriving business hub, specializing in donor egg retrieval.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 3: LEFT card -->
+          <div class="flex flex-col md:flex-row items-center gap-0 group scroll-reveal" style="transition-delay:0.3s">
+            <div class="md:w-[calc(50%-2rem)] md:pr-10 w-full">
+              <div class="bg-white rounded-[2.5rem] border border-outline-variant/10 shadow-sm p-8 transition-all duration-700 group-hover:shadow-[0_20px_60px_-15px_rgba(184,96,142,0.12)] group-hover:-translate-y-1">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-10 h-10 rounded-full bg-[#b8608e]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <span class="material-symbols-outlined text-[#b8608e] text-lg">location_on</span>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-headline text-on-surface">Bhopal — MP Nagar</h3>
+                    <p class="text-secondary text-sm mt-1">Zone 2, MP Nagar, Bhopal</p>
+                  </div>
+                </div>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Expanding our sanctuary to the state capital — bringing world-class IVF care to Bhopal patients.</p>
+              </div>
+            </div>
+            <div class="hidden md:flex w-16 shrink-0 flex-col items-center justify-center relative z-10">
+              <div class="w-14 h-14 rounded-full bg-white border-2 border-[#b8608e]/50 flex items-center justify-center shadow-md">
+                <span class="text-[#b8608e] font-bold text-xs text-center leading-tight">2016</span>
+              </div>
+            </div>
+            <div class="hidden md:block md:w-[calc(50%-2rem)]"></div>
+          </div>
+
+          <!-- Entry 4: RIGHT card -->
+          <div class="flex flex-col md:flex-row items-center gap-0 group scroll-reveal" style="transition-delay:0.4s">
+            <div class="hidden md:block md:w-[calc(50%-2rem)]"></div>
+            <div class="hidden md:flex w-16 shrink-0 flex-col items-center justify-center relative z-10">
+              <div class="w-14 h-14 rounded-full bg-white border-2 border-[#b8608e]/50 flex items-center justify-center shadow-md">
+                <span class="text-[#b8608e] font-bold text-xs text-center leading-tight">2020</span>
+              </div>
+            </div>
+            <div class="md:w-[calc(50%-2rem)] md:pl-10 w-full">
+              <div class="bg-white rounded-[2.5rem] border border-outline-variant/10 shadow-sm p-8 transition-all duration-700 group-hover:shadow-[0_20px_60px_-15px_rgba(184,96,142,0.12)] group-hover:-translate-y-1">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-10 h-10 rounded-full bg-[#b8608e]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <span class="material-symbols-outlined text-[#b8608e] text-lg">public</span>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-headline text-on-surface">Dubai — Healthcare City</h3>
+                    <p class="text-secondary text-sm mt-1">Dubai Healthcare City, UAE</p>
+                  </div>
+                </div>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Our first international centre — serving the South Asian diaspora across the Middle East.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 5: LEFT card -->
+          <div class="flex flex-col md:flex-row items-center gap-0 group scroll-reveal" style="transition-delay:0.5s">
+            <div class="md:w-[calc(50%-2rem)] md:pr-10 w-full">
+              <div class="bg-white rounded-[2.5rem] border border-outline-variant/10 shadow-sm p-8 transition-all duration-700 group-hover:shadow-[0_20px_60px_-15px_rgba(184,96,142,0.12)] group-hover:-translate-y-1">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-10 h-10 rounded-full bg-[#b8608e]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <span class="material-symbols-outlined text-[#b8608e] text-lg">public</span>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-headline text-on-surface">London — Harley Street</h3>
+                    <p class="text-secondary text-sm mt-1">Harley Street, London, UK</p>
+                  </div>
+                </div>
+                <p class="text-on-surface-variant text-sm leading-relaxed">A landmark presence on London's world-renowned medical street — extending our legacy of hope to Europe.</p>
+              </div>
+            </div>
+            <div class="hidden md:flex w-16 shrink-0 flex-col items-center justify-center relative z-10">
+              <div class="w-14 h-14 rounded-full bg-white border-2 border-[#b8608e]/50 flex items-center justify-center shadow-md">
+                <span class="text-[#b8608e] font-bold text-xs text-center leading-tight">2024</span>
+              </div>
+            </div>
+            <div class="hidden md:block md:w-[calc(50%-2rem)]"></div>
+          </div>
+
+        </div><!-- end space-y-16 -->
+      </div><!-- end relative -->
+    </div>
+  </section>
+
+  <!-- SYNCED CALL TO ACTION -->
+  <section class="py-16 px-6 md:px-16 max-w-screen-xl mx-auto scroll-reveal">
+    <div class="bg-surface-container-low rounded-[3rem] overflow-hidden flex flex-col lg:flex-row items-center relative group">
+      <div class="lg:w-1/2 h-[450px] relative overflow-hidden">
+        <img src="Images/brain/cta_editorial.png" alt="Nurturing care" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-surface-container-low/20 lg:to-surface-container-low"></div>
+        <!-- Decorative badge -->
+        <div class="absolute top-8 left-8 bg-white/10 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/20">
+          <p class="text-white font-headline italic text-lg shadow-sm">"Expertise you can trust, empathy you can feel."</p>
+        </div>
+      </div>
+      <div class="lg:w-1/2 p-12 lg:p-20 relative z-10">
+        <span class="text-xs font-bold uppercase tracking-[0.3em] mb-4 block"><span class="text-on-surface">START YOUR </span><span class="text-[#b8608e]">JOURNEY</span></span>
+        <h2 class="text-4xl md:text-5xl font-headline text-on-surface leading-tight mb-6">Your story of hope <br><span class="italic font-normal text-[#b8608e]">begins today.</span></h2>
+        <p class="text-on-surface-variant text-lg leading-relaxed mb-10 max-w-md">
+          We offer confidential consultations to explore all your options in a compassionate, clinical environment. Let's find your path together.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="bg-gradient-to-r from-[#b8608e] to-[#ae5885] text-white px-10 py-5 rounded-xl font-bold text-sm uppercase tracking-widest hover:shadow-xl hover:shadow-[#b8608e]/30 transition-all duration-300">
+            Book a Consultation
+          </button>
+          <button class="bg-white text-on-surface px-10 py-5 rounded-xl font-bold text-sm uppercase tracking-widest border border-outline-variant/50 hover:bg-surface-container-high transition-all duration-300">
+            Patient Guide
+          </button>
+        </div>
+      </div>
+      <!-- Background flourish -->
+      <div class="absolute -top-12 -right-12 w-64 h-64 bg-[#b8608e]/5 rounded-full blur-3xl"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-surface-container-low pt-12 pb-8">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Top section: Logo, socials, location info -->
+    <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-10 pb-12 border-b border-outline-variant/20">
+      <!-- Logo and description -->
+      <div class="max-w-md">
+        <a href="index.html" class="logo mb-6 block w-max">
+            <img src="Images/Brand Logo.png" alt="Asian Infertility Management Logo" style="height: 60px; width: auto;">
+        </a>
+        <p class="text-secondary mb-8">Providing a sanctuary for those on the path to parenthood. Clinical excellence meets compassionate care.</p>
+        <div class="flex gap-4">
+          <!-- Social Icons matching the header -->
+          <a href="https://www.facebook.com/asianinfertilityindia/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/asian_ivf_indore/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@asianfertilityindore" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2h15a2 2 0 0 1 2 2 24.12 24.12 0 0 1 0 10 2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2z"/><path d="m10 15 5-3-5-3z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Contact & Location -->
+      <div class="max-w-xs">
+        <h4 class="font-bold text-on-surface mb-6">Location &amp; Contact</h4>
+        <p class="text-secondary text-sm leading-relaxed mb-4">
+            <strong class="text-on-surface text-base">Asian Infertility Management</strong><br>
+            Indore, Madhya Pradesh<br>
+            India
+        </p>
+        <div class="text-secondary text-sm">
+          <a href="tel:+917581955550" class="hover:text-primary transition-colors block mb-2 font-bold">+91-7581955550</a>
+          <a href="mailto:info@asianinfertility.com" class="hover:text-primary transition-colors block">info@asianinfertility.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Massive Links Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-10">
+      
+      <!-- Column 1: Why AIIM (Part 1 - About) -->
+      <div>
+        <h4 class="font-bold text-on-surface mb-6">About AIIM</h4>
+        <ul class="space-y-3">
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">About Us</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Infrastructure</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Center Of Excellence</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Asian IVF Lab</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Asian Team</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Testimonials</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">IVF Treatment Cost</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Free IVF Camps</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">FAQ’s</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Why AIIM (Part 2 - Doctors) & Extra Nav -->
+      <div>
+        <h4 class="font-bold text-on-surface mb-6">Director Message</h4>
+        <ul class="space-y-3 mb-8">
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Dr Dinesh Jain</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Dr Shefali Jain</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Dr Atishay Jain</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Dr. Bela Shah Jain</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Dr. Vedant Jain</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Dr Michelle Shah</a></li>
+        </ul>
+        <h4 class="font-bold text-on-surface mb-6">Discover</h4>
+        <ul class="space-y-3">
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Awards And Recognitions</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Blog</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Patient Awareness</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Fertility Treatments -->
+      <div>
+        <h4 class="font-bold text-on-surface mb-6">Fertility Treatments</h4>
+        <ul class="space-y-3 mb-8">
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">In-Vitro Fertilization</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">ICSI Treatment</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">IUI Treatment</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Donor Eggs</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Donor Sperms</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Embryo Donation</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Ovulation Induction</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Fertility Preservation</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Egg Freezing</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Sperm Freezing</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Blastocyst Transfer</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Laser Assisted Hatching</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Surrogacy Treatment</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Diagnostics & Male -->
+      <div>
+        <h4 class="font-bold text-on-surface mb-6">Female Diagnostics</h4>
+        <ul class="space-y-3 mb-8">
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Hormonal Evaluation</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Ovarian Reserve Test</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">2D/3D/4D Ultrasound Scans</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Advance Hysteroscopy</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Advance Laparoscopy</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Follicular Tracking</a></li>
+        </ul>
+        <h4 class="font-bold text-on-surface mb-6">Male Fertility</h4>
+        <ul class="space-y-3">
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Semen Analysis</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Sperm Morphology</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Surgical Sperm Retrievals</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 5: Advanced & Obstetric -->
+      <div>
+        <h4 class="font-bold text-on-surface mb-6">Advanced Tests</h4>
+        <ul class="space-y-3 mb-8">
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">IMSI</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">DNA Fragmentation Test</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">HOS – Sperm Function Test</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Endometrial Receptivity Array</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">PGT-A</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">PRP – Platelet Rich Plasma</a></li>
+        </ul>
+        <h4 class="font-bold text-on-surface mb-6">Obstetric Care</h4>
+        <ul class="space-y-3">
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Antenatal Checkups (ANC)</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Blood Workup Test</a></li>
+          <li><a class="text-sm text-secondary hover:text-primary transition-colors block" href="#">Obstetric Ultrasound</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom copyright / legal -->
+    <div class="pt-10 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+        <p class="text-secondary text-sm">© 2026 Asian Infertility Management. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a class="text-sm text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+          <a class="text-sm text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a>
+          <a class="text-sm text-secondary hover:text-primary transition-colors" href="#">Disclaimer</a>
+        </div>
+      </div>
+      <div class="flex gap-6">
+        <span class="text-xs text-secondary/60">HIPAA Compliant</span>
+        <span class="text-xs text-secondary/60">FDA Registered</span>
+        <span class="text-xs text-secondary/60">SART Member</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const mapData = {
+    dots: [
+      { start: { lat: 64.2008, lng: -149.4937, label: "Fairbanks" }, end: { lat: 34.0522, lng: -118.2437, label: "Los Angeles" } },
+      { start: { lat: 64.2008, lng: -149.4937, label: "Fairbanks" }, end: { lat: -15.7975, lng: -47.8919, label: "Brasília" } },
+      { start: { lat: -15.7975, lng: -47.8919, label: "Brasília" }, end: { lat: 38.7223, lng: -9.1393, label: "Lisbon" } },
+      { start: { lat: 51.5074, lng: -0.1278, label: "London" }, end: { lat: 28.6139, lng: 77.209, label: "New Delhi" } },
+      { start: { lat: 28.6139, lng: 77.209, label: "New Delhi" }, end: { lat: 43.1332, lng: 131.9113, label: "Vladivostok" } },
+      { start: { lat: 28.6139, lng: 77.209, label: "New Delhi" }, end: { lat: -1.2921, lng: 36.8219, label: "Nairobi" } }
+    ],
+    lineColor: "#0ea5e9", 
+    animationDuration: 2, // Matched demo.tsx
+    staggerDelay: 0.3,   // Matched demo.tsx
+    pauseTime: 2
+  };
+
+  const mapSvg = document.getElementById('mapSvg');
+  const mobileTooltip = document.getElementById('mobileTooltip');
+  const totalAnimationTime = mapData.dots.length * mapData.staggerDelay + mapData.animationDuration;
+  const fullCycleDuration = totalAnimationTime + mapData.pauseTime;
+
+  function projectPoint(lat, lng) {
+    const x = (lng + 180) * (800 / 360);
+    const y = (90 - lat) * (400 / 180);
+    return { x, y };
+  }
+
+  function createCurvedPath(start, end) {
+    const midX = (start.x + end.x) / 2;
+    const midY = Math.min(start.y, end.y) - 50;
+    return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
+  }
+
+  function initMap() {
+    const styleTag = document.createElement('style');
+    document.head.appendChild(styleTag);
+    let allKeyframes = '';
+
+    mapData.dots.forEach((dot, i) => {
+      const startPoint = projectPoint(dot.start.lat, dot.start.lng);
+      const endPoint = projectPoint(dot.end.lat, dot.end.lng);
+      const pathD = createCurvedPath(startPoint, endPoint);
+
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", pathD);
+      path.setAttribute("fill", "none");
+      path.setAttribute("stroke", "url(#path-gradient)");
+      path.setAttribute("stroke-width", "1.5");
+      path.setAttribute("stroke-linecap", "round");
+      
+      const startTime = (i * mapData.staggerDelay) / fullCycleDuration;
+      const endTime = (i * mapData.staggerDelay + mapData.animationDuration) / fullCycleDuration;
+      const resetTime = totalAnimationTime / fullCycleDuration;
+
+      mapSvg.appendChild(path);
+      const totalLength = path.getTotalLength();
+      path.style.strokeDasharray = totalLength;
+      path.style.strokeDashoffset = totalLength;
+      
+      const animName = `drawPath_${i}`;
+      allKeyframes += `
+        @keyframes ${animName} {
+          0%, ${startTime * 100}% { stroke-dashoffset: ${totalLength}; opacity: 0; }
+          ${((startTime + 0.02) * 100)}% { opacity: 1; }
+          ${endTime * 100}% { stroke-dashoffset: 0; opacity: 1; }
+          ${resetTime * 100}%, 100% { stroke-dashoffset: 0; opacity: 0; }
+        }
+      `;
+      path.style.animation = `${animName} ${fullCycleDuration}s cubic-bezier(0.4, 0, 0.2, 1) infinite`;
+
+      const traveler = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      traveler.setAttribute("r", "2.5");
+      traveler.setAttribute("fill", mapData.lineColor);
+      traveler.setAttribute("filter", "url(#glow)");
+      
+      const travelerAnimName = `travel_${i}`;
+      allKeyframes += `
+        @keyframes ${travelerAnimName} {
+          0%, ${startTime * 100}% { offset-distance: 0%; opacity: 0; }
+          ${(startTime + 0.01) * 100}% { opacity: 1; }
+          ${endTime * 100}% { offset-distance: 100%; opacity: 1; }
+          ${(endTime + 0.01) * 100}%, 100% { opacity: 0; }
+        }
+      `;
+      
+      traveler.style.offsetPath = `path('${pathD}')`;
+      traveler.style.animation = `${travelerAnimName} ${fullCycleDuration}s linear infinite`;
+      mapSvg.appendChild(traveler);
+
+      if (i === 0 || !mapData.dots.some((d, idx) => idx < i && (d.start.label === dot.start.label))) {
+          createHotspot(startPoint, dot.start.label, i);
+      }
+      createHotspot(endPoint, dot.end.label, i + 100);
+    });
+    
+    styleTag.textContent = allKeyframes;
+  }
+
+  function createHotspot(point, label, i) {
+    const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    group.setAttribute("class", "hotspot-group cursor-pointer");
+    
+    const pulse = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    pulse.setAttribute("cx", point.x);
+    pulse.setAttribute("cy", point.y);
+    pulse.setAttribute("r", "3");
+    pulse.setAttribute("fill", mapData.lineColor);
+    
+    const animPulse = document.createElementNS("http://www.w3.org/2000/svg", "circle"); // This is meant to be pulse animation
+    // Simplified pulse style for vanilla JS performance
+    const pulseAnim = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+    pulseAnim.setAttribute("attributeName", "r");
+    pulseAnim.setAttribute("from", "3");
+    pulseAnim.setAttribute("to", "15");
+    pulseAnim.setAttribute("dur", "2s");
+    pulseAnim.setAttribute("repeatCount", "indefinite");
+    pulse.appendChild(pulseAnim);
+    
+    const pulseOpacity = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+    pulseOpacity.setAttribute("attributeName", "opacity");
+    pulseOpacity.setAttribute("from", "0.6");
+    pulseOpacity.setAttribute("to", "0");
+    pulseOpacity.setAttribute("dur", "2s");
+    pulseOpacity.setAttribute("repeatCount", "indefinite");
+    pulse.appendChild(pulseOpacity);
+    
+    const core = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    core.setAttribute("cx", point.x);
+    core.setAttribute("cy", point.y);
+    core.setAttribute("r", "3.5");
+    core.setAttribute("fill", mapData.lineColor);
+    core.setAttribute("filter", "url(#glow)");
+    
+    group.appendChild(pulse);
+    group.appendChild(core);
+
+    const fo = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
+    fo.setAttribute("x", point.x - 50);
+    fo.setAttribute("y", point.y - 45);
+    fo.setAttribute("width", "100");
+    fo.setAttribute("height", "40");
+    fo.setAttribute("class", "pointer-events-none transition-all duration-500");
+    
+    fo.innerHTML = `
+      <div class="flex items-center justify-center w-full h-full">
+        <div class="px-4 py-1.5 bg-white border border-outline-variant/10 rounded-lg text-[11px] font-bold text-black shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-all duration-300">
+          ${label}
+        </div>
+      </div>
+    `;
+    
+    group.appendChild(fo);
+    mapSvg.appendChild(group);
+
+    group.addEventListener('mouseenter', () => {
+      mobileTooltip.innerText = label;
+      mobileTooltip.style.opacity = '1';
+      mobileTooltip.style.transform = 'translateY(0)';
+    });
+    group.addEventListener('mouseleave', () => {
+      mobileTooltip.style.opacity = '0';
+      mobileTooltip.style.transform = 'translateY(16px)';
+    });
+  }
+
+  const navbar = document.getElementById('navbar');
+  let lastScrollTop = 0;
+  window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+      navbar.style.top = "-200px";
+    } else {
+      navbar.style.top = "0";
+    }
+    lastScrollTop = Math.max(0, scrollTop);
+  });
+
+  window.addEventListener('load', initMap);
+
+  // Scroll Reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.scroll-reveal').forEach(el => {
+    revealObserver.observe(el);
+  });
+</script>
+
+<!-- DottedMap CDN — same library as world-map.tsx (DottedMap({ height:100, grid:"diagonal" })) -->
+<script type="module">
+  try {
+    const { default: DottedMap } = await import('https://cdn.jsdelivr.net/npm/dotted-map@3.1.0/+esm');
+    const map = new DottedMap({ height: 100, grid: "diagonal" });
+    const svgMap = map.getSVG({
+      radius: 0.22,
+      color: "#00000040",
+      shape: "circle",
+      backgroundColor: "white",
+    });
+    const mapBg = document.getElementById('dottedMapBg');
+    if (mapBg) {
+      mapBg.src = `data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`;
+    }
+  } catch (e) {
+    console.warn('dotted-map CDN failed, map background not loaded.', e);
+  }
+</script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
